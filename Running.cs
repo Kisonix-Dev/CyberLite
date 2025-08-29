@@ -9,9 +9,9 @@ namespace CyberLite
       string ver = "1.0";
       string Name;
 
-      while (true)
+      try
       {
-        try
+        while (true)
         {
           Console.Clear();
           Console.CursorVisible = false;
@@ -50,22 +50,12 @@ namespace CyberLite
             break;
           }
         }
-        catch (Exception)
-        {
-          Console.Clear();
-          Console.ForegroundColor = ConsoleColor.Red;
-          Console.WriteLine("Error");
-          Console.ResetColor();
-        }
-      }
 
-      Console.ForegroundColor = ConsoleColor.Yellow;
-      Console.WriteLine("*Введите команду: help - что-бы отобразить доступные команды.");
-      Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("*Введите команду: help - что-бы отобразить доступные команды.");
+        Console.ResetColor();
 
-      while (true)
-      {
-        try
+        while (true)
         {
           Console.CursorVisible = true;
           Console.Write($"$" + Name + "PC-0 > ");
@@ -75,6 +65,11 @@ namespace CyberLite
           {
             case "help":
               Console.WriteLine(@"
+    Система
+help - Отображение справки по всем командам в системе. 
+clear - Очистить терминал. 
+poweroff - Выйти из игры. 
+    Программы
 scanip - Программа для сканирования IP адресов в сети.
 ssh - Сетевой протокол для передачи данных.
 scanp - Сканирование портов в сети.
@@ -113,13 +108,13 @@ botnet - Сеть заражённых компьютеров, можно исп
               continue;
           }
         }
-        catch (Exception)
-        {
-          Console.Clear();
-          Console.ForegroundColor = ConsoleColor.Red;
-          Console.WriteLine("Error");
-          Console.ResetColor();
-        }
+      }
+      catch (Exception)
+      {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Error");
+        Console.ResetColor();
       }
     }
   }
