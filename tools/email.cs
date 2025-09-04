@@ -2,8 +2,6 @@ namespace CyberLite
 {
   class Email
   {
-    private bool quest1 = false;
-    private bool quest1On = false;
     private void Run()
     {
       Console.Clear();
@@ -35,7 +33,7 @@ namespace CyberLite
     }
     private void Quests()
     {
-      Console.WriteLine("Это твоё первое задание, взломай сервер компании: Blizzard, который отвечает за обработку игровой подписки для игры: World of Warcraft/\n А после этого, добавь на игровой аккаунт: 'Mystery@gmail.com 100.000 дней игрового времени.'");
+
     }
   }
 }

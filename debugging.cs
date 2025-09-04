@@ -16,7 +16,9 @@ namespace CyberLite
         if (_debugMode == 0)
         {
           Scanip scan = new Scanip();
-          scan.Run();
+          //scan.Run();
+          Quest quest = new Quest();
+          quest.Quest1();
         }
       }
       catch (Exception)
